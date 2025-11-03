@@ -1,3 +1,8 @@
+### Live Demo
+Try the patient readmission prediction app here:
+
+👉 [Streamlit App Link]([https://your-streamlit-url.com](https://patient-30-day-readmission.streamlit.app/))
+
 ## Part 1: Short Answer Questions (30 points)
 
 ### 1. Problem Definition (6 points)
