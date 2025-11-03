@@ -2,10 +2,12 @@
 
 ### 1. Problem Definition (6 points)
 **Hypothetical AI Problem:** Predicting student dropout risk in online courses.
+
 **Objectives**
 1. Identify at-risk students early to provide interventions.
 2. Improve overall course completion rates.
 3. Reduce institutional financial loss due to dropouts.
+
 **Stakeholders**
 - Teachers
 - Students/Learners
@@ -16,11 +18,14 @@
 ---
 
 ### 2. Data Collection & Preprocessing (8 points)
+
 **Data Sources**
 1. LMS activity logs i.e login frequency, assignment submissions etc.
 2. Student & academic records database.
+
 **Potential Bias**
 - Students with poor internet access may appear disengaged and incorrectly be labeled as high dropout risk.
+
 **Preprocessing Steps**
 1. Handle missing values i.e missing grades.
 2. Normalize numeric features i.e, number of logins.
@@ -30,7 +35,9 @@
 
 ### 3. Model Development (8 points)
 **Chosen Model:** Random Forest. 
+
 **Reason:** Works well with mixed data types, provides feature importance, robust to noise.
+
 **Data Split Strategy:**  
 - 70% training  
 - 30% validation 
@@ -44,9 +51,11 @@
 ### 4. Evaluation & Deployment (8 points)
 **Evaluation Metrics**
 - **Precision:** Avoids wrongly labeling students as at-risk  
-- **Recall:** Ensures at-risk students are identified. 
+- **Recall:** Ensures at-risk students are identified.
+  
 **Concept Drift** is a change in the relationship between the features & the labels.
-- **Monitoring:** Track model accuracy each semester and retrain if performance is poor.
+- **Monitor** it by Track model accuracy each semester and retrain if performance is poor.
+- 
 **Deployment Challenge**
 - Scaling the model to support predictions for thousands of students in real time.
 
@@ -56,10 +65,12 @@
 
 ### 1. Problem Scope (5 points)
 **Problem:** Predict whether a patient will be readmitted within 30 days of hospital discharge.  
+
 **Objectives:** 
 - Reduce avoidable readmissions
 - Improve patient care
-- Lower hospital costs.  
+- Lower hospital costs.
+  
 **Stakeholders:** Doctors, nurses, patients.
 
 ---
@@ -70,9 +81,11 @@
 - Electronic Health Records (EHRs)
 - Patient demographics i.e age
 - Medication & discharge summary records
+  
 **Ethical Concerns**
 1. Patient privacy & sensitive data handling.
 2. Model bias against age, gender, or income groups.
+
 **Preprocessing Pipeline**
 1. Remove personal identifiers i.e HIPAA compliance
 2. Assign missing lab values to Null
@@ -85,6 +98,7 @@
 ### 3. Model Development (10 points)
 **Chosen Model:** XGBoost (Gradient Boosting)  
 **Reason:** Excellent for structured medical datasets, handles nonlinear relationships.
+
 **Hypothetical Confusion Matrix**
 
 |                       | Predicted Readmit | Predicted No Readmit |
@@ -104,6 +118,7 @@
 3. Display risk score to doctors in dashboard
 4. Log predictions for auditing & retraining
 5. Set alerts for high-risk patients
+
 **Regulatory Compliance**
 - Encrypt stored & transmitted data  
 - Follow HIPAA or local medical data laws  
@@ -111,7 +126,6 @@
 ---
 
 ### 5. Optimization (5 points)
-
 **Overfitting Reduction Strategy:**  
 - Reduce tree depth in XGBoost.
 
@@ -122,6 +136,7 @@
 ### Ethics & Bias (10 points)
 **Impact of Data Bias**
 - If historical data under-treated certain groups, the model may predict them as higher risk, leading to unequal care.
+  
 **Mitigation**
 - Perform fairness testing.
   
